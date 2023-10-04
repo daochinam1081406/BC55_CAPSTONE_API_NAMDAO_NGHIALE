@@ -3,9 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+ul {
+    margin-bottom: 0;
+}
 header .nav_header{
     background-color: #343434;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 0px;
 }
 header .nav_header .nav_ql{
     display: flex;
