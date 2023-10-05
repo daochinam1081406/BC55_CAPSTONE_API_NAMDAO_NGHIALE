@@ -66,6 +66,7 @@ header .nav_body .footer_left .form_1{
 header .nav_body .footer_left .form_1 .input_1{
     width: 370px;
     height: 45px;
+    box-shadow: none;
     border: none;
 }
 header .nav_body .footer_left .form_1 .button_search{
@@ -102,6 +103,10 @@ header .nav_body .footer_right .number_phone
     font-weight: bold;
     width: 150px;
     margin-right: 10px;
+    transition: all 0.5s;
+}
+header .nav_body .footer_right .number_phone:hover{
+    border: 1px solid #DEDEDE;
 }
 header .nav_body .footer_right .number_phone .nav_bodylogo{
     padding-right: 10px;
@@ -122,6 +127,10 @@ header .nav_body .footer_right .product{
     font-size: 12px;
     font-weight: bold;
     padding-top: 10px;
+    transition: all 0.5s;
+}
+header .nav_body .footer_right .product:hover{
+    border: 1px solid #DEDEDE;
 }
 header .nav_body .footer_right .product .footer_right_logo{
     font-size: 15px;
