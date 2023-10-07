@@ -137,3 +137,102 @@ header .nav_body .footer_right .product .footer_right_logo{
     padding-bottom: 10px;
     padding-right: 7px;
 }
+
+header .nav_footer{
+    background-color: #191919;
+    color: white;
+}
+header .nav_footer .navfooter_menu{
+    padding-top: 14px;
+    font-weight: bold;
+}
+header .nav_footer .navfooter_menu1 ul{
+    list-style: none;
+    display: flex;
+}
+header .nav_footer .navfooter_menu1 ul li{
+    padding: 14px;
+}
+header .nav_footer .navfooter_menu1 ul .active_head{
+    background-color: #000000;
+}
+header .nav_footer .navfooter_menu1 ul li a{
+    text-decoration: none;
+    color: white;
+}
+header .nav_footer .navfooter_menu1 ul li:hover{
+    background-color: #3E3E3E;
+}
+/* PRODUCT  */
+.product .title_product_top{
+    background-color: #F7F7F7;
+}
+.product .title_product_top h5{
+    background-color: #009FDD;
+    width: 20%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid rgba(52, 53, 51, 0.886);
+    border-radius: 10px;
+    color: white;
+}
+.product .card_product_top{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.product .card_product_top .content_product{
+    padding: 10px;
+    margin-top: 10px;
+}
+.product .card_product_top .content_product .image_product img{
+    width: 100%;
+}
+.product .card_product_top .content_product .text_product {
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5;
+}
+.product .card_product_top .content_product:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.product .card_product_top .content_product:hover .text_product {
+    animation-name: slideoutleft;
+    animation-duration: 0.5s;
+    /* hoi anh xem opacity con gi nua  */
+    display: none;
+}
+
+.product .card_product_top .content_product:hover .buy_product{
+    display: block;
+    opacity: 1;
+    animation-name: slideoutright;
+    animation-duration: 0.5s;
+    
+}
+.product .card_product_top .buy_product{
+    display: none;
+    margin-left: 90px;
+}
+@keyframes slideoutleft {
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+}
+@keyframes slideoutright {
+    from{
+        transform: translateX(90px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
