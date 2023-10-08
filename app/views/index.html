@@ -16,6 +16,18 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- link font text  -->
 
+  <!-- carousel slick -->
+  <link
+  rel="stylesheet"
+  type="text/css"
+  href="./../../assets/lib/slick/slick.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="./../../assets/lib/slick//slick-theme.css"
+/>
+
   <!-- link css  -->
   <link rel="stylesheet" href="./../../assets/css/style.css" />
 </head>
@@ -158,7 +170,21 @@
     </div>
   </header>
   <!-- carousel: NAMDAO -->
-
+  <section id="carousel">
+    <div class="Home-slider custom-container">
+      <div class="item">
+        <img
+          src="./../images/den_tro_sang_loboo_anywhere_man_95e9d14c07bf4d1998ff72c5c472b5f3.webp"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./../images/slider_banner_chigee_04d94e09f5fb4e45b2792e11f044bfb4.webp"
+          alt=""
+        />
+      </div>
+    </section>
   <!-- Product: NGHIALE  -->
   <section class="product">
     <div class="container">
@@ -367,7 +393,27 @@
         </div>
       </div>
     </div>
-    
+    <section>
+      <div>
+      <div class="item">
+        <img
+          src="./../images/slider_banner_loboo_19130d2cefe942b3aee201fad11f46c6.webp"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./../images/slider_banner_nhot_4da77d0867f34d25b0cf5dbe91976cdc.webp"
+          alt=""
+        />
+      </div>
+      <div class="item">
+        <img
+          src="./../images/slider_banner_rk_e871696a94bf4b439c1c012cdc2ee180.webp"
+          alt=""
+        />
+      </div>
+    </div>
   </section>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -380,6 +426,31 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./../../assets/lib/slick/slick.min.js"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".Home-slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+      });
+    });
+  </script>
   <script src="./../models/product.js"></script>
   <script src="./../services/callapi.js"></script>
   <script src="./../controllers/index.js"></script>
