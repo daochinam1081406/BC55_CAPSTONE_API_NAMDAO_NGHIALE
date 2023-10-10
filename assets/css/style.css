@@ -195,6 +195,9 @@ header .nav_footer .navfooter_menu1 ul li:hover{
     background-color: #3E3E3E;
 }
 /* PRODUCT  */
+.product .container{
+  margin-bottom: 20px;
+}
 .product .title_product_top{
     background-color: #F7F7F7;
 }
@@ -246,7 +249,7 @@ header .nav_footer .navfooter_menu1 ul li:hover{
 }
 .product .card_product_top .buy_product{
     display: none;
-    margin-left: 90px;
+    margin-left: 95px;
 }
 @keyframes slideoutleft {
     from{
