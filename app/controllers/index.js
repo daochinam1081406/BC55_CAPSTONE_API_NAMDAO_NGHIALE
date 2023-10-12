@@ -1,3 +1,35 @@
+function getEle(id) {
+  return document.getElementById(id);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // back to top
 let mybutton = document.getElementById("btnBackToTop");
 
@@ -59,3 +91,5 @@ togglesidebar.onclick = function () {
   }
   console.log(togglesidebar.className);
 };
+
+

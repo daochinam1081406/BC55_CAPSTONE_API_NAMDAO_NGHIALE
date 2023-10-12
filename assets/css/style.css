@@ -196,6 +196,12 @@ header .nav_footer .navfooter_menu1 ul li:hover {
   background-color: #3e3e3e;
 }
 /* PRODUCT  */
+.product .container{
+  margin-bottom: 20px;
+}
+.product .title_product_top{
+    background-color: #F7F7F7;
+}
 .product .title_product_top {
   background-color: #f7f7f7;
 }
@@ -243,6 +249,10 @@ header .nav_footer .navfooter_menu1 ul li:hover {
   opacity: 1;
   animation-name: slideoutright;
   animation-duration: 0.5s;
+}
+.product .card_product_top .buy_product{
+    display: none;
+    margin-left: 95px;
 }
 .product .card_product_top .buy_product {
   display: none;
