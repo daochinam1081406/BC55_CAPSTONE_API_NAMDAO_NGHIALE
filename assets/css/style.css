@@ -219,7 +219,17 @@ header .nav_footer .navfooter_menu1 ul li:hover {
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+.product .card_product_top1{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
 .product .card_product_top .content_product {
+  padding: 10px;
+  margin-top: 10px;
+  min-height: 461px;
+}
+.product .card_product_top1 .content_product {
   padding: 10px;
   margin-top: 10px;
   min-height: 461px;
@@ -227,7 +237,15 @@ header .nav_footer .navfooter_menu1 ul li:hover {
 .product .card_product_top .content_product .image_product img {
   width: 100%;
 }
+.product .card_product_top1 .content_product .image_product img {
+  width: 100%;
+}
 .product .card_product_top .content_product .text_product {
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.5;
+}
+.product .card_product_top1 .content_product .text_product {
   text-align: center;
   font-weight: bold;
   transition: all 0.5;
@@ -236,8 +254,18 @@ header .nav_footer .navfooter_menu1 ul li:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
 }
+.product .card_product_top1 .content_product:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
 
 .product .card_product_top .content_product:hover .text_product {
+  animation-name: slideoutleft;
+  animation-duration: 0.5s;
+  /* hoi anh xem opacity con gi nua  */
+  opacity: 0;
+}
+.product .card_product_top1 .content_product:hover .text_product {
   animation-name: slideoutleft;
   animation-duration: 0.5s;
   /* hoi anh xem opacity con gi nua  */
@@ -250,11 +278,25 @@ header .nav_footer .navfooter_menu1 ul li:hover {
   animation-name: slideoutright;
   animation-duration: 0.5s;
 }
+.product .card_product_top1 .content_product:hover .buy_product {
+  display: block;
+  opacity: 1;
+  animation-name: slideoutright;
+  animation-duration: 0.5s;
+}
 .product .card_product_top .buy_product{
     display: none;
     margin-left: 95px;
 }
+.product .card_product_top1 .buy_product{
+  display: none;
+  margin-left: 95px;
+}
 .product .card_product_top .buy_product {
+  display: none;
+  margin-left: 90px;
+}
+.product .card_product_top1 .buy_product {
   display: none;
   margin-left: 90px;
 }
@@ -1079,3 +1121,5 @@ section-news .list-blogs-link .blog-item .blog-item-thumbnail {
   transform: scale(1.1);
   opacity: 0.7;
 }
+
+
