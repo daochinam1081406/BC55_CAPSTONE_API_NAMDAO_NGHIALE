@@ -1,34 +1,3 @@
-function getEle(id) {
-  return document.getElementById(id);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // back to top
 let mybutton = document.getElementById("btnBackToTop");
