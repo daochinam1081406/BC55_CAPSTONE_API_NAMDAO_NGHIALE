@@ -1,7 +1,7 @@
 function Product(id, tenSP, GiaSP, HinhAnhSP, LoaiSP) {
     this.id = id;
-    this.tenSP = tenSP;
-    this.GiaSP = GiaSP;
-    this.hinhAnhSP = HinhAnhSP;
-    this.LoaiSP = LoaiSP;
+    this.Name = tenSP;
+    this.Price = GiaSP;
+    this.Images = HinhAnhSP;
+    this.Type = LoaiSP;
 }
