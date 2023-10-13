@@ -114,9 +114,9 @@
               </div>
             </div>
           </div>
-
           <!-- Body -->
           <div class="card-body">
+            
             <div class="row mb-3">
               <div class="col">
                 <div class="input-group">
@@ -126,6 +126,15 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="group-section">
+              <select class="form-control selectsapxep" id="sapXepTangDan">
+                <option >---Sắp Xếp Giá---</option>
+                <option >---Sắp Xếp Giá Tăng Dần---</option>
+                <option >---Sắp Xếp Giá Giảm Dần---</option>
+              </select>
+              <button class="btn btn-success" id="nutSapXepTheSelect" onclick="sapXepTangDan()">Check</button>
+            </div>
             </div>
             <table class="table table-bordered table-hover myTable">
               <thead class="text-primary">
@@ -145,7 +154,6 @@
               </thead>
               <tbody id="tableDanhSach"></tbody>
             </table>
-          </div>
 
           <!-- Footer -->
           <div class="card-footer myCardFooter">

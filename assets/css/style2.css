@@ -278,3 +278,15 @@ a.article, a.article:hover {
   .myCardHeader, .myCardFooter{
       background-color: transparent;       
   }
+
+#content .container .card .card-body .selectsapxep     {
+    width: 240px;
+    margin-bottom: 15px;
+  }
+#content .container .card .card-body .group-section{
+display: flex;
+}     
+#content .container .card .card-body .group-section .btn-success{
+    height: 40px;
+    margin-left: 20px;
+}

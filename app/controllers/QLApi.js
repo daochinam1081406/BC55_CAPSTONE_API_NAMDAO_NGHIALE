@@ -128,8 +128,7 @@ function capNhatProduct(id) {
 // tim kiem sp
 getEle("searchName").addEventListener("keyup", function () {
     var keyWord = getEle("searchName").value;
-    var mangTimKiem = timKiemSanPham(keyWord);
-    renderApi(mangTimKiem);
+    timKiemSanPham(keyWord);
 }
 )
 function timKiemSanPham(keyWord) {
@@ -148,14 +147,51 @@ function timKiemSanPham(keyWord) {
                     arrayTimKiem.push(product);
                 }
             }
+            renderApi(arrayTimKiem);
         })
         .catch(function (error) {
             console.log(error);
         })
     return arrayTimKiem;
 }
+// sắp xếp tăng dần
+function sapXepTangDan() {
+    var promise = api.fectData();
+    promise
+        .then(function (result) {
+            var data = result.data
+            var layValueSelect = document.getElementById("sapXepTangDan").selectedIndex;
+            if (layValueSelect == 0) {
+                return null;
+            } else if (layValueSelect == 1) {
+                for (let i = 0; i < data.length - 1; i++) {
+                    for (let j = i + 1; j < data.length; j++) {
+                        if (data[i].Price > data[j].Price) {
+                            var dungArray = data[i];
+                            data[i] = data[j];
+                            data[j] = dungArray;
+                        }
+                    }
+                }
+                renderApi(data);
 
-
+            } else if (layValueSelect == 2) {
+                for (let i = 0; i < data.length - 1; i++) {
+                    for (let j = i + 1; j < data.length; j++) {
+                        if (data[i].Price < data[j].Price) {
+                            var dungArray = data[i];
+                            data[i] = data[j];
+                            data[j] = dungArray;
+                        }
+                    }
+                }
+                renderApi(data);
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+}
 
 
 
