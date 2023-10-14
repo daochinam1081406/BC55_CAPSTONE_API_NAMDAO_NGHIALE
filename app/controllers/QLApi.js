@@ -73,6 +73,7 @@ function themChoiXe() {
         promise
             .then(function () {
                 getListProduct()
+                document.getElementsByClassName("close")[0].click();
             })
             .catch(function (error) {
                 console.log(error);
