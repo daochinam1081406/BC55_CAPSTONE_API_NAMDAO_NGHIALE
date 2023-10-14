@@ -79,7 +79,7 @@
             <div class="footer_left">
               <div class="row navbody_ql">
                 <div class="col-md-5 ">
-                  <a href="#"><img class="img_logo" src="../images/image1.png" alt=""></a>
+                  <!-- <a href="#"><img class="img_logo" src="../images/image1.png" alt=""></a> -->
                 </div>
                 <div class="col-md-7">
                   <form class="form-inline form_1">
@@ -114,7 +114,7 @@
                   <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <div class="footer_right_text">
-                  <P>(0) Sản Phẩm </br>Giỏ Hàng</p>
+                  <P id="soluong_hientai">(0) Sản Phẩm </br>Giỏ Hàng</p>
                 </div>
               </div>
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -217,6 +217,41 @@
       </div>
     </div>
   </section>
+  <!-- Gio hàng NAMDAO-->
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Giỏ Hàng Của Bạn</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tên Sản Phẩm</th>
+                  <th>Giá</th>
+                  <th>Số Lượng</th>
+                  <th>Tổng Tiền</th>
+                  <th>Xóa</th> <!-- Thêm cột xóa -->
+                </tr>
+              </thead>
+              <tbody id="cartItems">
+                <!-- Các sản phẩm trong giỏ hàng sẽ được thêm ở đây -->
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary">Thanh Toán</button>
+            <p id="cartTotal">Tổng Tiền: 0₫</p>
+          </div>
+        </div>
+      </div>
+    </div>
   <!-- hinh dep NAMDAO -->
   <section class="awe-section-8">
     <section class="container section-news margin-bottom-20">
