@@ -31,4 +31,11 @@ function CallApi() {
             data: product
         })
     }
+    this.fectData = function () {
+        var promise = axios({
+            url: "https://6513a2258e505cebc2ea0105.mockapi.io/ProductMotor",
+            method: "GET"
+        })
+        return promise
+    }
 }
