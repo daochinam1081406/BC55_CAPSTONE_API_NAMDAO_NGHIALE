@@ -204,39 +204,16 @@
       <div class="title_product_top">
         <h5>ĐỒ CHƠI XE</h5>
       </div>
-      <div class="card_product_top">
-        <div class="content_product">
-          <div class="image_product">
-            <a href="#">
-              <img src="../images/product4.jpg" alt="">
-            </a>
-          </div>
-          <div class="text_product">
-            <p>Túi chống nước cao cấp 40L Loboo</p>
-            <span>3,250,000₫</span>
-          </div>
-          <button class="btn btn-success buy_product">Mua</button>
-        </div>
-
+      <div class="card_product_top" id="listProduct">
+        
       </div>
     </div>
     <div class="container">
       <div class="title_product_top">
         <h5>Đồ Chăm Sóc Xe</h5>
       </div>
-      <div class="card_product_top1 ">
-        <div class="content_product">
-          <div class="image_product">
-            <a href="#">
-              <img src="../images/cham_xe_1.jpg" alt="">
-            </a>
-          </div>
-          <div class="text_product">
-            <p>Túi chống nước cao cấp 40L Loboo</p>
-            <span>3,250,000₫</span>
-          </div>
-          <button class="btn btn-success buy_product">Mua</button>
-        </div>
+      <div class="card_product_top1 " id="listProduct2">
+        
       </div>
     </div>
   </section>
@@ -495,9 +472,14 @@
       });
     });
   </script>
-  <script src="./../models/product.js"></script>
-  <script src="./../services/callapi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+    integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../models/product.js"></script>
+  <script src="../services/callapi.js"></script>
+  <script src="../models/validation.js"></script>
   <script src="./../controllers/index.js"></script>
+  <script src="./../controllers/product_show.js"></script>
 </body>
 
 </html>
