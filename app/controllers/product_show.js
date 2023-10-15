@@ -37,7 +37,7 @@ function saveCartToLocalStorage(cart) {
 }
 
 // Hàm để thêm sản phẩm vào giỏ hàng
-function addToCart(product) {
+function addToCart(product, isOnlyShow) {
   // Lấy thông tin sản phẩm
   var productName = product.querySelector(".text_product p").textContent;
   var productPrice = product.querySelector(".text_product span").textContent;
@@ -49,12 +49,13 @@ function addToCart(product) {
     price: productPrice,
     quantity: productQuantity,
   };
-
-  cart.push(cartItem);
+  if (isOnlyShow === 0) {
+    cart.push(cartItem);
+  }
 
   // Cập nhật nội dung của modal giỏ hàng
   updateCartModal();
-
+  updateTotalQuantity();
   // Lưu giỏ hàng vào local storage
   saveCartToLocalStorage(cart);
 }
@@ -103,6 +104,7 @@ function removeFromCart(index) {
   if (index >= 0 && index < cart.length) {
     cart.splice(index, 1); // Xóa sản phẩm khỏi giỏ hàng
     updateCartModal(); // Cập nhật modal
+    updateTotalQuantity();
     saveCartToLocalStorage(cart); // Lưu giỏ hàng vào local storage sau khi xóa
   }
 }
@@ -142,7 +144,7 @@ function renderUIIndex(data) {
               <span class="quantity-value">0</span>
               <button class="increment btn btn-secondary">+</button>
             </div>
-            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement)">Mua</button>
+            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0)">Mua</button>
             </div>
           </div>
         </div>
@@ -165,7 +167,7 @@ function renderUIIndex(data) {
               <span class="quantity-value">0</span>
               <button class="increment btn btn-secondary">+</button>
             </div>
-            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement)">Mua</button>
+            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0)">Mua</button>
             </div>
           </div>
         </div>
@@ -194,4 +196,16 @@ function renderUIIndex(data) {
       quantityValue.textContent = (currentValue + 1).toString();
     });
   });
+}
+updateTotalQuantity();
+// Hàm cập nhật tổng số lượng sản phẩm trong giỏ hàng
+function updateTotalQuantity() {
+  // Tính tổng số lượng từ giỏ hàng
+  var totalQuantity = cart.reduce(function (total, item) {
+    return total + parseInt(item.quantity, 10);
+  }, 0);
+
+  // Hiển thị tổng số lượng trong thẻ <p>
+  var soluong_hientai = getEleIndex("soluong_hientai");
+  soluong_hientai.textContent = `(${totalQuantity}) Sản Phẩm \n Giỏ Hàng`;
 }
