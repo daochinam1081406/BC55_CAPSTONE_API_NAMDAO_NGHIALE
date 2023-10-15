@@ -34,7 +34,7 @@ function renderApi(data) {
         <td>${product.Name}</td>
         <td>${product.Price}</td>
         <td>
-        <img width="100px" src="./app/images/${product.Images}" alt="">
+        <img width="100px" src="../images/${product.Images}" alt="">
         </td>
         <td>${product.Type}</td>
         <td>
@@ -96,6 +96,13 @@ function themChoiXe() {
                 console.log(error);
             });
     }
+}
+document.getElementById("btnThem").onclick = function () {
+    document.getElementById("header-title").innerHTML = "Sản Phẩm"
+    var btnThem = `<button id="btnThemChoiXe" type="button" class="btn btn-success" onclick="themChoiXe()">
+    Thêm Đồ Chơi Xe
+  </button>`
+    document.getElementsByClassName("modal-footer")[0].innerHTML = btnThem;
 }
 function repairProduct(id) {
     document.getElementById("header-title").innerHTML = "Repair Product";
