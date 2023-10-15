@@ -33,7 +33,7 @@ getListProduct();
 //     <div class="content_product">
 //           <div class="image_product">
 //             <a href="#">
-//               <img src="../images/${arrayDoChoiXe.Images}" alt="">
+//               <img src="./app/images/${arrayDoChoiXe.Images}" alt="">
 //             </a>
 //           </div>
 //           <div class="text_product">
@@ -47,7 +47,7 @@ getListProduct();
 //     <div class="content_product">
 //           <div class="image_product">
 //             <a href="#">
-//               <img src="../images/${arrayChamSocXe.Images}" alt="">
+//               <img src="./app/images/${arrayChamSocXe.Images}" alt="">
 //             </a>
 //           </div>
 //           <div class="text_product">
@@ -72,7 +72,7 @@ function renderApi(data) {
         <td>${product.Name}</td>
         <td>${product.Price}</td>
         <td>
-        <img width="100px" src="./../images/${product.Images}" alt="">
+        <img width="100px" src="./app/images/${product.Images}" alt="">
         </td>
         <td>${product.Type}</td>
         <td>
