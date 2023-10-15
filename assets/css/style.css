@@ -1123,3 +1123,21 @@ section-news .list-blogs-link .blog-item .blog-item-thumbnail {
   opacity: 0.7;
 }
 
+
+/* responsive  */
+@media (max-width: 1200px) {
+header .nav_body .footer_left .form_1 .input_1  {
+    width: 300px; 
+  }
+  header .nav_body .footer_right .number_phone p{
+   font-size: 10px;
+  }
+}
+@media (max-width: 991px) {
+  header .nav_body .footer_left .form_1 .input_1  {
+      width: 300px; 
+    }
+    header .nav_body .footer_right .number_phone p{
+     font-size: 10px;
+    }
+  }

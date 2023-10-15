@@ -78,12 +78,12 @@ function updateCartModal() {
     row.innerHTML = `
       <td>${item.name}</td>
       <td>${parseFloat(
-        item.price
-      )}</td> <!-- Định dạng giá thành tiền tệ Việt Nam -->
+      item.price
+    )}</td> <!-- Định dạng giá thành tiền tệ Việt Nam -->
       <td>${item.quantity}</td>
       <td>${formatCurrency(
-        parseFloat(calculateTotal(item.price, item.quantity))
-      )}</td> <!-- Định dạng tổng tiền thành tiền tệ Việt Nam -->
+      parseFloat(calculateTotal(item.price, item.quantity))
+    )}</td> <!-- Định dạng tổng tiền thành tiền tệ Việt Nam -->
       <td><button class="btn btn-danger" onclick="removeFromCart(${index})">Xóa</button></td>
     `;
     cartItems.appendChild(row);
