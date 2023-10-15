@@ -45,6 +45,7 @@ function addToCart(product, isOnlyShow) {
     var productQuantity = product.querySelector(".quantity-value").textContent;
     if (productQuantity === "0") {
       alert("Vui lòng thêm số lượng!");
+      return;
     }
     // Thêm sản phẩm vào mảng giỏ hàng
     var cartItem = {
