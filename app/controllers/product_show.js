@@ -132,7 +132,7 @@ function renderUIIndex(data) {
         <div class="content_product">
           <div class="image_product">
             <a href="#">
-              <img src="../images/${product.Images}" alt="">
+              <img src="./app/images/${product.Images}" alt="">
             </a>
           </div>
           <div class="text_product">
@@ -155,7 +155,7 @@ function renderUIIndex(data) {
         <div class="content_product">
           <div class="image_product">
             <a href="#">
-              <img src="../images/${product.Images}" alt="">
+              <img src="./app/images/${product.Images}" alt="">
             </a>
           </div>
           <div class="text_product">
