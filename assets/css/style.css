@@ -490,8 +490,18 @@ header .nav_body .footer_right .product .footer_right_logo {
   border: 1px solid #fff;
 }
 
-.footer .tt-footer-default .tt-newsletter .tt-collapse-content form button:hover,
-.footer .tt-footer-default .tt-newsletter .tt-collapse-content form button:focus {
+.footer
+  .tt-footer-default
+  .tt-newsletter
+  .tt-collapse-content
+  form
+  button:hover,
+.footer
+  .tt-footer-default
+  .tt-newsletter
+  .tt-collapse-content
+  form
+  button:focus {
   background-color: #343434;
 }
 
@@ -853,7 +863,7 @@ span.capst-icon.-back span.fa {
   left: 33px;
 }
 
-.hotline-bar>a {
+.hotline-bar > a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -865,8 +875,8 @@ span.capst-icon.-back span.fa {
   font-family: Arial;
 }
 
-.hotline-bar>a:hover,
-.hotline-bar>a:active {
+.hotline-bar > a:hover,
+.hotline-bar > a:active {
   color: #fff;
 }
 
@@ -1082,11 +1092,13 @@ ul.left-icon.hotline {
 }
 
 .float-icon-hotline ul li .fa-zalo {
-  background: url(https://netweb.vn/img/hotline/zalo.png) center center no-repeat;
+  background: url(https://netweb.vn/img/hotline/zalo.png) center center
+    no-repeat;
 }
 
 .float-icon-hotline ul li .fa-zalo:hover {
-  background: #ef0303 url(https://netweb.vn/img/hotline/zalo.png) center center no-repeat;
+  background: #ef0303 url(https://netweb.vn/img/hotline/zalo.png) center center
+    no-repeat;
   opacity: 0.5;
 }
 
@@ -1095,7 +1107,8 @@ ul.left-icon.hotline {
 }
 
 .float-icon-hotline ul li .fa-messenger:hover {
-  background: #168efb url(https://netweb.vn/img/hotline/fb.png) center center no-repeat;
+  background: #168efb url(https://netweb.vn/img/hotline/fb.png) center center
+    no-repeat;
   opacity: 0.5;
 }
 
@@ -1379,7 +1392,6 @@ button.decrement.btn.btn-secondary {
   }
 
   header .nav_body .footer_right .product {
-
     padding-left: 10px;
     padding-top: -8px;
   }
@@ -1491,4 +1503,10 @@ button.decrement.btn.btn-secondary {
   .product .card_product_top1 .content_product .product-actions .quantity {
     margin-left: 25px;
   }
+}
+#Moto1,
+#Moto3,
+#Moto3,
+#Moto4 {
+  width: 100%;
 }

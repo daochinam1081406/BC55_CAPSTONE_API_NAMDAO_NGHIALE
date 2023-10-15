@@ -80,12 +80,12 @@ function updateCartModal() {
     row.innerHTML = `
       <td>${item.name}</td>
       <td>${parseFloat(
-      item.price
-    )}</td> <!-- Định dạng giá thành tiền tệ Việt Nam -->
+        item.price
+      )}</td> <!-- Định dạng giá thành tiền tệ Việt Nam -->
       <td>${item.quantity}</td>
       <td>${formatCurrency(
-      parseFloat(calculateTotal(item.price, item.quantity))
-    )}</td> <!-- Định dạng tổng tiền thành tiền tệ Việt Nam -->
+        parseFloat(calculateTotal(item.price, item.quantity))
+      )}</td> <!-- Định dạng tổng tiền thành tiền tệ Việt Nam -->
       <td><button class="btn btn-danger" onclick="removeFromCart(${index})">Xóa</button></td>
     `;
     cartItems.appendChild(row);
@@ -132,7 +132,7 @@ function renderUIIndex(data) {
         <div class="content_product">
           <div class="image_product">
             <a href="#">
-              <img src="../images/${product.Images}" alt="">
+              <img src="./app/images/${product.Images}" alt="">
             </a>
           </div>
           <div class="text_product">
@@ -155,7 +155,7 @@ function renderUIIndex(data) {
         <div class="content_product">
           <div class="image_product">
             <a href="#">
-              <img src="../images/${product.Images}" alt="">
+              <img src="./app/images/${product.Images}" alt="">
             </a>
           </div>
           <div class="text_product">
