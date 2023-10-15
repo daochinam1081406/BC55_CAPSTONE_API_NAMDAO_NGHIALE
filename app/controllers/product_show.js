@@ -152,7 +152,7 @@ function renderUIIndex(data) {
       `;
     } else {
       content2 += `
-        <div class="content_product">
+        <div class="content_product ">
           <div class="image_product">
             <a href="#">
               <img src="./app/images/${product.Images}" alt="">

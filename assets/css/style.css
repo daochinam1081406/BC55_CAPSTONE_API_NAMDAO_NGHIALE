@@ -1135,3 +1135,9 @@ button.decrement.btn.btn-secondary {
   max-width: 100%;
   max-height: 300px; /* Điều chỉnh kích thước tối đa của ảnh */
 }
+#Moto1,
+#Moto2,
+#Moto3,
+#Moto4 {
+  width: 100%;
+}
