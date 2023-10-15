@@ -97,6 +97,7 @@ header .nav_body .footer_left .navbody_ql {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
 }
 header .nav_body .footer_right {
   display: flex;
