@@ -8,6 +8,7 @@ function getListProduct() {
   promise
     .then(function (result) {
       renderApi(result.data);
+      // renderUI(result.data)
     })
     .catch(function name(error) {
       console.log(error);
@@ -15,6 +16,52 @@ function getListProduct() {
 }
 getListProduct();
 
+// function renderUI(data) {
+//     var content = "";
+//     var content1 = "";
+//     var arrayChamSocXe = [];
+//     var arrayDoChoiXe = [];
+//     for (let i = 0; i < data.length; i++) {
+//         var product = data[i];
+//         if (product.Price === "----Đồ Chơi----") {
+//             arrayDoChoiXe.push(product);
+//         } else {
+//             arrayChamSocXe.push(product)
+//         }
+//     }
+//     content += `
+//     <div class="content_product">
+//           <div class="image_product">
+//             <a href="#">
+//               <img src="../images/${arrayDoChoiXe.Images}" alt="">
+//             </a>
+//           </div>
+//           <div class="text_product">
+//             <p>${arrayDoChoiXe.Name}</p>
+//             <span>${arrayDoChoiXe.Price}</span>
+//           </div>
+//           <button class="btn btn-success buy_product">Mua</button>
+//         </div>
+//     `
+//     content1 += `
+//     <div class="content_product">
+//           <div class="image_product">
+//             <a href="#">
+//               <img src="../images/${arrayChamSocXe.Images}" alt="">
+//             </a>
+//           </div>
+//           <div class="text_product">
+//             <p>${arrayChamSocXe.Name}</p>
+//             <span>${arrayChamSocXe.Price}</span>
+//           </div>
+//           <button class="btn btn-success buy_product">Mua</button>
+//         </div>
+
+//     `
+//     document.getElementById("doChoiXe").innerHTML = content;
+//     document.getElementById("doChamXe").innerHTML = content1;
+
+// }
 function renderApi(data) {
   var content = "";
   for (var i = 0; i < data.length; i++) {
@@ -81,6 +128,7 @@ function themChoiXe() {
     promise
       .then(function () {
         getListProduct();
+        document.getElementsByClassName("close")[0].click();
       })
       .catch(function (error) {
         console.log(error);
