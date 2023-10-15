@@ -43,7 +43,9 @@ function addToCart(product, isOnlyShow) {
     var productName = product.querySelector(".text_product p").textContent;
     var productPrice = product.querySelector(".text_product span").textContent;
     var productQuantity = product.querySelector(".quantity-value").textContent;
-
+    if (productQuantity === "0") {
+      alert("Vui lòng thêm số lượng!");
+    }
     // Thêm sản phẩm vào mảng giỏ hàng
     var cartItem = {
       name: productName,
