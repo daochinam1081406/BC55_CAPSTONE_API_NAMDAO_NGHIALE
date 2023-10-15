@@ -24,8 +24,6 @@ function getListProduct() {
         });
 }
 getListProduct();
-
-
 function renderApi(data) {
     var content = "";
     for (var i = 0; i < data.length; i++) {
@@ -36,7 +34,7 @@ function renderApi(data) {
         <td>${product.Name}</td>
         <td>${product.Price}</td>
         <td>
-        <img width="100px" src="./../images/${product.Images}" alt="">
+        <img width="100px" src="./app/images/${product.Images}" alt="">
         </td>
         <td>${product.Type}</td>
         <td>
