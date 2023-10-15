@@ -1130,3 +1130,7 @@ section-news .list-blogs-link .blog-item .blog-item-thumbnail {
 button.decrement.btn.btn-secondary {
   padding: 6px 14px;
 }
+#previewImage {
+  max-width: 100%;
+  max-height: 300px; /* Điều chỉnh kích thước tối đa của ảnh */
+}

@@ -39,17 +39,18 @@ function saveCartToLocalStorage(cart) {
 // Hàm để thêm sản phẩm vào giỏ hàng
 function addToCart(product, isOnlyShow) {
   // Lấy thông tin sản phẩm
-  var productName = product.querySelector(".text_product p").textContent;
-  var productPrice = product.querySelector(".text_product span").textContent;
-  var productQuantity = product.querySelector(".quantity-value").textContent;
-
-  // Thêm sản phẩm vào mảng giỏ hàng
-  var cartItem = {
-    name: productName,
-    price: productPrice,
-    quantity: productQuantity,
-  };
   if (isOnlyShow === 0) {
+    var productName = product.querySelector(".text_product p").textContent;
+    var productPrice = product.querySelector(".text_product span").textContent;
+    var productQuantity = product.querySelector(".quantity-value").textContent;
+
+    // Thêm sản phẩm vào mảng giỏ hàng
+    var cartItem = {
+      name: productName,
+      price: productPrice,
+      quantity: productQuantity,
+    };
+
     cart.push(cartItem);
   }
 

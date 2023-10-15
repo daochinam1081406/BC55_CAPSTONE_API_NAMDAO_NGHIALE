@@ -42,3 +42,21 @@ function smoothScrollToTop() {
 function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
 }
+// Lắng nghe sự kiện khi người dùng chọn tệp ảnh
+document
+  .getElementById("fileInput")
+  .addEventListener("change", function (event) {
+    var file = event.target.files[0];
+    if (file) {
+      // Đọc tệp ảnh thành chuỗi dạng Base64
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var imageSrc = e.target.result;
+
+        // Hiển thị ảnh trên thẻ <img>
+        var previewImage = document.getElementById("previewImage");
+        previewImage.src = imageSrc;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
