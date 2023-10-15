@@ -1,4 +1,3 @@
-
 // back to top
 let mybutton = document.getElementById("btnBackToTop");
 
@@ -43,22 +42,3 @@ function smoothScrollToTop() {
 function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
 }
-var togglesidebar = document.getElementById("togglesidebar");
-togglesidebar.onclick = function () {
-  var rightsidebar = document.getElementById("rightsidebar");
-  if (
-    togglesidebar.className ==
-    "fa title-open-rightsidebar tooltipstered fa-angle-double-left"
-  ) {
-    togglesidebar.classList.remove("fa-angle-double-left");
-    togglesidebar.classList.add("fa-angle-double-right");
-    rightsidebar.classList.remove("hide-right-bar-notifications");
-  } else {
-    togglesidebar.classList.remove("fa-angle-double-right");
-    togglesidebar.classList.add("fa-angle-double-left");
-    rightsidebar.classList.add("hide-right-bar-notifications");
-  }
-  console.log(togglesidebar.className);
-};
-
-

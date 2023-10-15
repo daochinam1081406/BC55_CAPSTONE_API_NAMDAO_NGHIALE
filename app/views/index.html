@@ -30,7 +30,7 @@
     <div class="nav_header">
       <div class="container">
         <div class="row nav_ql">
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-6 col-6">
             <div class="navheader_left">
               <ul class="mb-0">
                 <li>
@@ -51,7 +51,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-6 col-6">
             <div class="navheader_right">
               <ul>
                 <li class="li-account">
@@ -109,7 +109,7 @@
 
                 </div>
               </div>
-              <div class="product" data-toggle="modal" data-target="#exampleModal">
+              <div class="product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,1)">
                 <div class="footer_right_logo">
                   <i class="fa-solid fa-cart-shopping"></i>
                 </div>
@@ -142,13 +142,13 @@
     <div class="nav_footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 .col-lg-3 .col-md-3 .col-sm-3">
             <div class="navfooter_menu">
               <i class="fa-solid fa-ellipsis-vertical"></i>
               <span>DANH MỤC SẢN PHẨM</span>
             </div>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 .col-lg-9 .col-md-9 .col-sm-3">
             <div class="navfooter_menu1">
               <ul>
                 <li class="active_head">
@@ -502,9 +502,10 @@
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         arrows: true,
+        
       });
     });
   </script>
