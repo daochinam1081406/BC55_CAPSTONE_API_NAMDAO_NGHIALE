@@ -60,13 +60,3 @@ function toggleContainers() {
     carCareContainer.style.display = "block";
   }
 }
-$("#cartModal").on("show.bs.modal", function () {
-  var productQuantity = parseInt(
-    document.querySelector(".quantity-value").textContent
-  );
-
-  if (productQuantity === 0) {
-    // Nếu số lượng sản phẩm là 0, ngăn modal xuất hiện
-    $(this).modal("hide");
-  }
-});
