@@ -35,26 +35,43 @@ function getCartFromLocalStorage() {
 function saveCartToLocalStorage(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
-
+var showModal = true; // Biến để kiểm tra xem có hiển thị modal hay không
 // Hàm để thêm sản phẩm vào giỏ hàng
-function addToCart(product, isOnlyShow) {
+function addToCart(product, isOnlyShow, id) {
   // Lấy thông tin sản phẩm
-  if (isOnlyShow === 0) {
-    var productName = product.querySelector(".text_product p").textContent;
-    var productPrice = product.querySelector(".text_product span").textContent;
-    var productQuantity = product.querySelector(".quantity-value").textContent;
-    if (productQuantity === "0") {
-      alert("Vui lòng thêm số lượng!");
-      return;
-    }
-    // Thêm sản phẩm vào mảng giỏ hàng
-    var cartItem = {
-      name: productName,
-      price: productPrice,
-      quantity: productQuantity,
-    };
 
-    cart.push(cartItem);
+  if (isOnlyShow === 0) {
+    var productId = id;
+    var productQuantity = product.querySelector(".quantity-value").textContent;
+    if (productQuantity == 0) {
+      alert("Bạn đã không nhập số lượng cho sản phẩm!");
+    } else {
+      var productName = product.querySelector(".text_product p").textContent;
+      var productPrice =
+        product.querySelector(".text_product span").textContent;
+
+      // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+      var existingCartItemIndex = cart.findIndex(
+        (item) => item.id === productId
+      );
+
+      if (existingCartItemIndex !== -1) {
+        // Nếu sản phẩm đã tồn tại, tăng số lượng
+        cart[existingCartItemIndex].quantity = (
+          parseInt(cart[existingCartItemIndex].quantity) +
+          parseInt(productQuantity)
+        ).toString();
+      } else {
+        // Nếu sản phẩm chưa tồn tại, thêm mới vào giỏ hàng
+        var cartItem = {
+          id: productId,
+          name: productName,
+          price: productPrice,
+          quantity: productQuantity,
+        };
+        cart.push(cartItem);
+      }
+    }
   }
 
   // Cập nhật nội dung của modal giỏ hàng
@@ -148,7 +165,9 @@ function renderUIIndex(data) {
               <span class="quantity-value">0</span>
               <button class="increment btn btn-secondary">+</button>
             </div>
-            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0)">Mua</button>
+            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0,${
+              product.id
+            })">Mua</button>
             </div>
           </div>
         </div>

@@ -1510,3 +1510,15 @@ button.decrement.btn.btn-secondary {
 #Moto4 {
   width: 100%;
 }
+/* Định dạng cho combobox tối màu */
+.dark-select {
+  background-color: #333; /* Màu nền */
+  color: #fff; /* Màu văn bản */
+  border: 1px solid #666; /* Màu viền */
+}
+
+/* Định dạng cho các mục trong danh sách thả xuống */
+.dark-select option {
+  background-color: #333; /* Màu nền */
+  color: #fff; /* Màu văn bản */
+}

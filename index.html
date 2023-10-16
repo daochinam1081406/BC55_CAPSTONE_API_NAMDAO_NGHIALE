@@ -198,23 +198,33 @@
 
 
   </section>
+  <!-- NAMDAO Chi nhóm lựa chọn sản phẩm -->
+  <div class="container"> 
+    <div class="form-group">
+      <label for="exampleSelect">Chọn nhóm sản phẩm:</label>
+      <select class="form-control dark-select" id="exampleSelect" onchange="toggleContainers()">
+        <option value="all">Tất cả</option>
+        <option value="toys">Nhóm đồ chơi xe</option>
+        <option value="car-care">Nhóm chăm sóc xe</option>
+      </select>
+    </div>
+  </div>
   <!-- Product: NGHIALE  -->
   <section class="product">
-    <div class="container ">
+    <div class="container" id="toys-container">
       <div class="title_product_top">
         <h5>ĐỒ CHƠI XE</h5>
       </div>
-
       <div class="card_product_top" id="listProduct">
-        
+        <!-- Nội dung container ĐỒ CHƠI XE -->
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="car-care-container">
       <div class="title_product_top">
         <h5>Đồ Chăm Sóc Xe</h5>
       </div>
-      <div class="card_product_top1 " id="listProduct2">
-        
+      <div class="card_product_top1" id="listProduct2">
+        <!-- Nội dung container Đồ Chăm Sóc Xe -->
       </div>
     </div>
   </section>
