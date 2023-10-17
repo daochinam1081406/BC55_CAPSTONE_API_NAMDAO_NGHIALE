@@ -73,7 +73,7 @@ function addToCart(product, isOnlyShow, id) {
       }
     }
   }
-
+  //
   // Cập nhật nội dung của modal giỏ hàng
   updateCartModal();
   updateTotalQuantity();
@@ -98,16 +98,20 @@ function updateCartModal() {
   cart.forEach(function (item, index) {
     var row = document.createElement("tr");
     row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${parseFloat(
-        item.price
-      )}</td> <!-- Định dạng giá thành tiền tệ Việt Nam -->
-      <td>${item.quantity}</td>
-      <td>${formatCurrency(
-        parseFloat(calculateTotal(item.price, item.quantity))
-      )}</td> <!-- Định dạng tổng tiền thành tiền tệ Việt Nam -->
-      <td><button class="btn btn-danger" onclick="removeFromCart(${index})">Xóa</button></td>
-    `;
+    <td>${item.name}</td>
+    <td>${parseFloat(item.price)}</td>
+    <td>
+      <div class="quantity">
+        <button class="decrement-modal btn btn-secondary" onclick="decrementCartItem(${index})">-</button>
+        <span class="quantity-value-modal">${item.quantity}</span>
+        <button class="increment-modal btn btn-secondary" onclick="incrementCartItem(${index})">+</button>
+      </div>
+    </td>
+    <td>${formatCurrency(
+      parseFloat(calculateTotal(item.price, item.quantity))
+    )}</td>
+    <td><button class="btn btn-danger" onclick="removeFromCart(${index})">Xóa</button></td>
+  `;
     cartItems.appendChild(row);
 
     // Cộng dồn tổng tiền
@@ -190,7 +194,9 @@ function renderUIIndex(data) {
               <span class="quantity-value">0</span>
               <button class="increment btn btn-secondary">+</button>
             </div>
-            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0)">Mua</button>
+            <button class="btn btn-success buy_product" data-toggle="modal" data-target="#cartModal" onclick="addToCart(this.parentElement.parentElement,0,${
+              product.id
+            })">Mua</button>
             </div>
           </div>
         </div>
@@ -231,4 +237,29 @@ function updateTotalQuantity() {
   // Hiển thị tổng số lượng trong thẻ <p>
   var soluong_hientai = getEleIndex("soluong_hientai");
   soluong_hientai.textContent = `(${totalQuantity}) Sản Phẩm \n Giỏ Hàng`;
+}
+function decrementCartItem(index) {
+  if (index >= 0 && index < cart.length) {
+    var currentItem = cart[index];
+    if (currentItem.quantity > 0) {
+      currentItem.quantity--;
+      updateCartModal(); // Cập nhật lại modal sau khi giảm số lượng
+      saveCartToLocalStorage(cart); // Lưu giỏ hàng vào local storage sau khi cập nhật
+    }
+  }
+}
+
+function incrementCartItem(index) {
+  if (index >= 0 && index < cart.length) {
+    var currentItem = cart[index];
+    currentItem.quantity++;
+    updateCartModal(); // Cập nhật lại modal sau khi tăng số lượng
+    saveCartToLocalStorage(cart); // Lưu giỏ hàng vào local storage sau khi cập nhật
+  }
+}
+function clearCart() {
+  cart = []; // Xóa toàn bộ sản phẩm trong giỏ hàng
+  updateCartModal(); // Cập nhật modal giỏ hàng
+  updateTotalQuantity();
+  saveCartToLocalStorage(cart); // Lưu thay đổi vào Local Storage
 }

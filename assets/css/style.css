@@ -1522,3 +1522,86 @@ button.decrement.btn.btn-secondary {
   background-color: #333; /* Màu nền */
   color: #fff; /* Màu văn bản */
 }
+/* Thu nhỏ phần tử Tên Sản Phẩm và Giá */
+#cartItems td:nth-child(1),
+#cartItems td:nth-child(2) {
+  font-size: 14px;
+}
+
+/* Thu nhỏ phần tử Số Lượng và Tổng Tiền */
+#cartItems .quantity,
+#cartItems .quantity-value-modal,
+#cartItems .btn {
+  font-size: 14px;
+}
+
+/* Thay đổi độ rộng của nút cộng và trừ số lượng */
+#cartItems .increment-modal,
+#cartItems .decrement-modal {
+  width: 30px;
+  height: 24px;
+  font-size: 10px;
+}
+
+/* Thay đổi độ rộng của ô Số Lượng */
+
+/* Thay đổi độ rộng của ô Tổng Tiền */
+#cartItems td:nth-child(4) {
+  min-width: 80px;
+}
+/* Tránh nút bị rớt xuống dòng */
+#cartItems .quantity,
+#cartItems .quantity-value-modal {
+  white-space: nowrap;
+}
+
+/* Đặt nút cộng và trừ vào một hàng */
+#cartItems .increment-modal,
+#cartItems .decrement-modal {
+  display: inline-block;
+}
+
+#cartItems .quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cartItems td {
+  vertical-align: middle;
+}
+
+#cartItems td:nth-child(3),
+#cartItems td:nth-child(4),
+#cartItems td:nth-child(5) {
+  font-size: 12px; /* Điều chỉnh kích thước font cho cột "Số Lượng", "Tổng Tiền", và nút "Xóa" */
+  padding: 5px; /* Điều chỉnh khoảng cách nội dung bên trong ô */
+  text-align: center; /* Căn giữa nội dung trong cột "Số Lượng", "Tổng Tiền", và nút "Xóa" */
+}
+
+#cartItems .btn-danger {
+  font-size: 10px; /* Điều chỉnh kích thước font cho nút "Xóa" */
+  padding: 3px 5px; /* Điều chỉnh khoảng cách và kích thước nút "Xóa" */
+}
+/* Điều chỉnh vị trí của các phần tử trong footer */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Điều chỉnh vị trí của nút "Đóng" */
+.modal-footer .btn-secondary {
+  margin-right: 10px; /* Khoảng cách về bên phải */
+}
+
+/* Điều chỉnh vị trí của nút "Thanh Toán" */
+.modal-footer .btn-primary {
+  margin-left: 10px; /* Khoảng cách về bên trái */
+}
+
+/* Điều chỉnh vị trí của kết quả tổng tiền */
+#cartTotal {
+  flex-grow: 1; /* Mở rộng để chiếm hết phần còn lại */
+  text-align: center; /* Căn giữa văn bản */
+}
